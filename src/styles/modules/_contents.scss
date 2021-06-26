@@ -1,0 +1,136 @@
+// main content
+@use 'variables';
+@use 'mixins';
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 32px;
+    // background-color: $thirtColor;
+    .headlineFigure {
+        width: 100%;
+        img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            text-align: center;
+            color: variables.$fourthColor;
+            font-size: 15px;
+            font-weight: 400;
+            margin-top: 8px;
+            padding-bottom: 15px;
+        }
+    }
+    .headlineContent {
+        width: 100%;
+        padding: 26px 0;
+        padding-top: 50px;
+        .headlineTitle {
+            font-size: 34px;
+            font-weight: 500;
+        }
+        .headlineDesk {
+            font-size: 20px;
+            line-height: 1.2em;
+            margin-top: 15px;
+        }
+        .headlineButton {
+            @include mixins.button;
+        }
+    }
+    .exploreResto {
+        background-color: variables.$secondColor;
+        width: 100%;
+        .label {
+            display: block;
+            font-size: 22px;
+            padding-top: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .label::after {
+            content: '';
+            margin-top: 16px;
+            display: block;
+            border-bottom: 1px solid variables.$fourthColor;
+        }
+        .posts {
+            display: grid;
+            grid-row-gap: 16px;
+            margin: 16px auto;
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}
+
+.postItem {
+    background-color: variables.$firstColor;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0px;
+    position: relative;
+    width: 100%;
+    .postTitle {
+        background-color: variables.$textColor;
+        border-radius: 0 5px 5px 0;
+        color: variables.$firstColor;
+        font-size: 16px;
+        position: absolute;
+        padding: 5px;
+        top: 10px;    
+        text-align: center;
+    }
+    .postThumbnail {
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+    .postRating {
+        color: variables.$textColor;
+        background-color: variables.$thirtColor;
+        font-size: 16px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .postContent {
+        height: 260px;
+        line-height: 22px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        padding: 30px;
+        width: 100%;
+        .postItemTitle {
+            display: block;
+            font-size: 27px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-decoration: none;
+            line-height: 44px;
+        }
+        .postItemDesk {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            font-size: 15px;
+            position: relative;
+        }
+    }
+    .postButton {
+        @include mixins.button;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 800;
+        width: 100%;
+        &:hover {
+            background-color: variables.$textColor;
+            cursor: pointer;
+        }
+    }
+}

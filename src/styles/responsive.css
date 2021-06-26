@@ -1,0 +1,101 @@
+.content .exploreResto .posts {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (min-width: 455px) {
+    .content .headline .headlineContent {
+        padding: 16px 16px;
+    }
+
+    .content .headline .headlineContent .headlineTitle {
+        font-size: 28px;
+    }
+
+    .content .headline .headlineContent .headlineDesk {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .navigation {
+        z-index: 10;
+        background-color: #fff5eb;
+        width: 300px;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 0);
+        transform: translate(-300px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .navigation .navList .navItem {
+        display: list-item;
+        border-bottom: 1px solid #393c43;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .header .headerMenu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .content .headline .headlineContent {
+        margin: 0 auto;
+        max-width: 650px;
+    }
+
+    .post .postItem {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .post .postItem .postTitle {
+        font-size: 18px;
+    }
+
+    .post .postItem .postContent
+     {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .content .exploreResto .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .content .headline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content .exploreResto .posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+}
+

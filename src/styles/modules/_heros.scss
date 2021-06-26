@@ -1,0 +1,28 @@
+//hero
+@use 'variables';
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url("/images/heros/hero-image_3.jpg");
+    background-position: center;
+    background-color: variables.$firstColor;
+    .heroInner {
+        margin: 0 auto;
+        max-width: 800px;
+        .heroTitle {
+            color: variables.$firstColor;
+            font-size: 36px;
+            font-weight: 500;
+        }
+        .heroTagline {
+            color: variables.$firstColor;
+            margin-top: 16px;
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+}

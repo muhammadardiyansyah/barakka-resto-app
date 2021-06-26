@@ -1,0 +1,37 @@
+// navigation
+@use 'variables';
+
+.navigation {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: variables.$secondColor;
+    .logoBar {
+        margin: 15px 20px;
+        width: 80px;
+        background-color: transparent;
+    }
+    .navList {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        .navItem {
+            box-sizing: border-box;
+            display: inline-block;
+            width: 30%;
+            text-transform: uppercase;
+            a {
+                display: inline-block;
+                font-size: 17px;
+                padding: 1.3em;
+                text-decoration: none;
+                color: variables.$textColor;
+                &:hover {
+                    text-decoration: underline;
+                    color: variables.$thirtColor;
+                }
+            }
+        }
+    }
+}
