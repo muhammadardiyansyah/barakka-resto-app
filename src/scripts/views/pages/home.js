@@ -1,5 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
-import { createBaseItemTemplate, restaurantListTemplate } from '../templates/template-creator';
+import { restaurantListTemplate } from '../templates/template-creator';
 import Loading from '../templates/template-loading';
 
 const Home = {
@@ -22,7 +22,6 @@ const Home = {
         <div class="main exploreResto">
           <h1 class="label">Explore Your Favorite Restaurant</h1>
           <section class=posts id="list-restaurant">
-            ${createBaseItemTemplate(20)}
           </section>
         </div>
         </div>

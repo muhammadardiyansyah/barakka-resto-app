@@ -1,52 +1,18 @@
 import CONFIG from '../../globals/config';
 
-const createBaseItemTemplate = (count) => {
-  const firstBox = (numberIndex) => numberIndex === 0 && count % 2 !== 0;
-  let template = '';
-  for (let i = 0; i < count; i += 1) {
-    template += `
-        <div class="card ${firstBox(i) ? 'odd-box' : ''}">
-            <div class="card-img__container">
-                <img class="card-img__container__res" alt="image base" src="./images/placeholder-large.jpg" srcset="./images/placeholder-small.jpg 480w, ./images/placeholder-large.jpg 800w" sizes="(max-width: 600px) 480px, 800px" crossorigin="anonymous"/>
-                <span class="card-img__container__title"><p>Title - City</p></span>
-                <span class="card-img__container__rating">
-                    <i title="ratings" class="fa fa-star"></i>
-                    <span>5</span>
-                </span>
-            </div>
-            <div class="card-content">
-                <p class="card-content__title">Description: </p>
-                <p class="truncate${firstBox(i) ? '2' : ''}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sequi ullam ad mollitia cupiditate aut iure officia, voluptate, sapiente modi quisquam est quod quas recusandae quo saepe atque nisi blanditiis.</p>
-            </div>
-        </div>
-        `;
-  }
-  return template;
-};
-
-const restaurantListTemplate = (restaurant, index, lastIndex) => {
-  const firstBox = (numberIndex) => numberIndex === 0 && lastIndex % 2 !== 0;
-  return `
-    <div class="card ${firstBox(index) ? 'odd-box' : ''}">
-        <a href="#/detail/${restaurant.id}">
-            <div class="card-img__container">
-                <img class="card-img__container__res lazyload" alt="image restaurant ${restaurant.name}" src="./images/placeholder-large.jpg" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SML + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" crossorigin="anonymous"/>
-                <span class="card-img__container__title">
-                    <p>${restaurant.name} - ${restaurant.city}</p>
-                </span>
-                <span class="card-img__container__rating">
-                    <i title="ratings" class="fa fa-star"></i>
-                    <span>${restaurant.rating}</span>
-                </span>
-            </div>
-            <div class="card-content">
-                <p class="card-content__title">Description: </p>
-                <p class="truncate${firstBox(index) ? '2' : ''}">${restaurant.description}</p>
-            </div>
-        </a>
+const restaurantListTemplate = (restaurant) => `
+  <article class="post-item">
+    <h2 class="post-item__title">${restaurant.city}</h2>
+    <figure>
+        <img class="post-item__thumbnail" src="${CONFIG.BASE_IMAGE_URL_SML + restaurant.pictureId}"/>
+        <figcaption class="post-item__rating">Rating ${restaurant.rating}</figcaption>
+    </figure>
+    <div class="post-item__content">
+        <a href="#/detail/${restaurant.id}" class="post-item__content__title">${restaurant.name}</a>
+        <p class="post-item__content__description">${restaurant.description}</p>
     </div>
-    `;
-};
+  </article>
+`;
 
 const restaurantDetailTemplate = (detail) => `
 <div class="detail">
@@ -118,4 +84,4 @@ const restaurantDetailTemplate = (detail) => `
 </div>
 `;
 
-export { createBaseItemTemplate, restaurantListTemplate, restaurantDetailTemplate };
+export { restaurantListTemplate, restaurantDetailTemplate };
