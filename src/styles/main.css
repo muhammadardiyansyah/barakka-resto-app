@@ -332,4 +332,62 @@ main {
   font-size: 16px;
 }
 
+.container {
+  margin: 1.3em 10%;
+  padding: 1em;
+  background-color: greenyellow;
+}
+.container .container-main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: hotpink;
+}
+.container .container-main .container-main__title {
+  font-size: 2em;
+  margin-bottom: 1.545em;
+  text-align: center;
+}
+.container .container-main #detail-restaurant {
+  font-size: 1.2em;
+}
+
+.detail {
+  display: grid;
+  grid-gap: 1.545em;
+  font-size: 1.2em;
+}
+.detail h3 {
+  font-size: 1.5em;
+  padding: 1em 1em 0 1em;
+  background-color: #fff5eb;
+  font-weight: bold;
+}
+.detail .detail-info .detail-info__category {
+  padding: 0.3em 1em;
+  background-color: #deedf0;
+  color: #393c43;
+  margin-right: 2px;
+  border-radius: 1.5em;
+}
+.detail .detail-menu .detail-menu__food {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.detail .detail-menu .detail-menu__food li {
+  padding: 0.5em 0;
+  display: block;
+  text-decoration: none;
+  background-color: red;
+  border: 0.5px solid green;
+  border-width: 0 0 0.5px;
+}
+.detail .detail-menu h4 {
+  font-weight: bold;
+  font-size: 1.37em;
+  padding: 1em;
+  background-color: #fff5eb;
+}
+
 /*# sourceMappingURL=main.css.map */

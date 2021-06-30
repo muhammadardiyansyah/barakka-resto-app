@@ -1,0 +1,63 @@
+@use 'variables';
+
+.container {
+    margin: 1.3em 10%;
+    padding: 1em;
+    background-color: greenyellow;
+    .container-main {
+        width: 100%;
+        margin: 0 auto;
+        background-color: hotpink;
+        .container-main__title {
+            font-size: 2em;
+            margin-bottom: 1.545em;
+            text-align: center;
+        }
+        #detail-restaurant {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.detail {
+    display: grid;
+    grid-gap: 1.545em;
+    font-size: 1.2em;
+    h3 {
+        font-size: 1.5em;
+        padding: 1em 1em 0 1em;
+        background-color: variables.$firstColor;
+        font-weight: bold;
+    }
+    .detail-info {
+        .detail-info__category {
+            padding: 0.3em 1em;
+            background-color: variables.$secondColor;
+            color: variables.$textColor;
+            margin-right: 2px;
+            border-radius: 1.5em;
+        }
+    }
+    .detail-menu {
+        .detail-menu__food {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-content: center;
+            li {
+                padding: 0.5em 0;
+                display: block;
+                text-decoration: none;
+                background-color: red;
+                border: 0.5px solid green;
+                border-width: 0 0 0.5px;
+            }
+        }
+        h4 {
+            font-weight: bold;
+            font-size: 1.37em;
+            padding: 1em;
+            background-color: variables.$firstColor;
+        }
+    }
+}

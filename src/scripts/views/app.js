@@ -15,11 +15,25 @@ class App {
   }
 
   _initialAppShell() {
+    this._initialDrawer();
+    this._initialToTop();
+  }
+
+  _initialDrawer() {
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,
       content: this._content,
-      toTop: this._toTop,
+    });
+  }
+
+  _initialToTop() {
+    this._toTop.addEventListener('scroll', () => {
+      if (window.pageYOffset > 200) {
+        this.classList.add('active');
+      } else {
+        this.classList.remove('active');
+      }
     });
   }
 

@@ -12,7 +12,7 @@ const Detail = {
       <div class="container">
         <div id="container-loading"></div>
         <div class="container-main">
-          <h2 class="container-main__title__contaner">DETAIL RESTAURANT</h2>
+          <h2 class="container-main__title">DETAIL RESTAURANT</h2>
           <section id="detail-restaurant"></section>
           <div class="container-main__like" id="likeButtonContainer"></div>
           <div class="contaner-main__form__review">
