@@ -12,7 +12,7 @@
   top: 0;
 }
 
-.toTop {
+.to-top {
   border: none;
   border-radius: 50%;
   bottom: 32px;
@@ -28,7 +28,7 @@
   z-index: 10;
 }
 
-.toTop.active {
+.to-top.active {
   background-color: #393c43;
   color: #fff5eb;
   opacity: 1;
@@ -69,30 +69,30 @@ section {
   text-align: center;
   background-color: #deedf0;
 }
-.navigation .logoBar {
+.navigation .logo-navigation__bar {
   margin: 15px 20px;
   width: 80px;
   background-color: transparent;
 }
-.navigation .navList {
+.navigation .navigation-list {
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.navigation .navList .navItem {
+.navigation .navigation-list .navigation-list__item {
   box-sizing: border-box;
   display: inline-block;
   width: 30%;
   text-transform: uppercase;
 }
-.navigation .navList .navItem a {
+.navigation .navigation-list .navigation-list__item a {
   display: inline-block;
   font-size: 17px;
   padding: 1.3em;
   text-decoration: none;
   color: #393c43;
 }
-.navigation .navList .navItem a:hover {
+.navigation .navigation-list .navigation-list__item a:hover {
   text-decoration: underline;
   color: #f4c7ab;
 }
@@ -102,20 +102,20 @@ section {
   transition: min-height 0.3s;
   background-color: #fff5eb;
 }
-.header .headerInner {
+.header .header-inner {
   width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
-.header .headerInner .headerTitle {
+.header .header-inner .header-inner__title {
   font-weight: 300;
   font-size: 4em;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #393c43;
 }
-.header .headerMenu {
+.header .header-menu {
   text-decoration: none;
   font-size: 45px;
   margin: 10px auto;
@@ -136,16 +136,16 @@ section {
   background-position: center;
   background-color: #fff5eb;
 }
-.hero .heroInner {
+.hero .hero-inner {
   margin: 0 auto;
   max-width: 800px;
 }
-.hero .heroInner .heroTitle {
+.hero .hero-inner .hero-inner__title {
   color: #fff5eb;
   font-size: 36px;
   font-weight: 500;
 }
-.hero .heroInner .heroTagline {
+.hero .hero-inner .hero-inner__tagline {
   color: #fff5eb;
   margin-top: 16px;
   font-size: 18px;
@@ -160,15 +160,15 @@ main {
 .content {
   padding: 32px;
 }
-.content .headlineFigure {
+.content .content-headline__figure {
   width: 100%;
 }
-.content .headlineFigure img {
+.content .content-headline__figure img {
   width: 80%;
   display: block;
   margin: 0 auto;
 }
-.content .headlineFigure figcaption {
+.content .content-headline__figure figcaption {
   text-align: center;
   color: #b2b8a3;
   font-size: 15px;
@@ -176,21 +176,21 @@ main {
   margin-top: 8px;
   padding-bottom: 15px;
 }
-.content .headlineContent {
+.content .content-headline__content {
   width: 100%;
   padding: 26px 0;
   padding-top: 50px;
 }
-.content .headlineContent .headlineTitle {
+.content .content-headline__content .content-headline__content___title {
   font-size: 34px;
   font-weight: 500;
 }
-.content .headlineContent .headlineDesk {
+.content .content-headline__content .content-headline__content__description {
   font-size: 20px;
   line-height: 1.2em;
   margin-top: 15px;
 }
-.content .headlineContent .headlineButton {
+.content .content-headline__content .content-headline__content__button {
   font-family: "EB Garamond", serif;
   text-transform: uppercase;
   margin-top: 24px;
@@ -205,64 +205,65 @@ main {
   background-color: #393c43;
   transition: opacity 0.3s;
 }
-.content .headlineContent .headlineButton:hover {
+.content .content-headline__content .content-headline__content__button:hover {
   opacity: 0.8;
 }
-.content .exploreResto {
+.content .container .contaner-main {
   background-color: #deedf0;
   width: 100%;
 }
-.content .exploreResto .label {
+.content .container .contaner-main .contaner-main__label {
   display: block;
   font-size: 22px;
   padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
 }
-.content .exploreResto .label::after {
+.content .container .contaner-main .contaner-main__label::after {
   content: "";
   margin-top: 16px;
   display: block;
   border-bottom: 1px solid #b2b8a3;
 }
-.content .exploreResto .posts {
+.content .container .contaner-main .contaner-main__posts {
   display: grid;
-  grid-row-gap: 16px;
+  grid-gap: 1.545em;
   margin: 16px auto;
   padding: 20px;
   width: 100%;
 }
 
-.postItem {
+.post-item {
+  overflow: auto;
   background-color: #fff5eb;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px 0px;
+  margin: 10px 0;
   position: relative;
   width: 100%;
 }
-.postItem .postTitle {
+.post-item .post-item__title {
   background-color: #393c43;
   border-radius: 0 5px 5px 0;
   color: #fff5eb;
   font-size: 16px;
   position: absolute;
   padding: 5px;
-  top: 10px;
+  top: 20px;
   text-align: center;
 }
-.postItem .postThumbnail {
+.post-item .post-item__thumbnail {
   height: 250px;
   object-fit: cover;
   width: 100%;
 }
-.postItem .postRating {
+.post-item .post-item__rating {
   color: #393c43;
   background-color: #f4c7ab;
   font-size: 16px;
   margin-top: 10px;
   text-align: center;
 }
-.postItem .postContent {
+.post-item .post-item__content {
   height: 260px;
   line-height: 22px;
   margin-bottom: 30px;
@@ -270,7 +271,7 @@ main {
   padding: 30px;
   width: 100%;
 }
-.postItem .postContent .postItemTitle {
+.post-item .post-item__content .post-item__content__title {
   display: block;
   font-size: 27px;
   font-weight: 600;
@@ -278,16 +279,16 @@ main {
   text-decoration: none;
   line-height: 44px;
 }
-.postItem .postContent .postItemDesk {
+.post-item .post-item__content .post-item__content__description {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   font-size: 15px;
   position: relative;
 }
-.postItem .postButton {
+.post-item .post-item__link__detail {
   font-family: "EB Garamond", serif;
   text-transform: uppercase;
   margin-top: 24px;
@@ -301,15 +302,18 @@ main {
   border-radius: 5px;
   background-color: #393c43;
   transition: opacity 0.3s;
+  padding-top: 13px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
   display: inline-block;
   font-weight: 800;
   width: 100%;
 }
-.postItem .postButton:hover {
+.post-item .post-item__link__detail:hover {
   opacity: 0.8;
 }
-.postItem .postButton:hover {
+.post-item .post-item__link__detail:hover {
   background-color: #393c43;
   cursor: pointer;
 }
@@ -322,7 +326,7 @@ main {
   width: 100%;
   padding: 30px;
 }
-.footer .footerCopyright {
+.footer .footer-copyright {
   text-align: center;
   font-weight: 400;
   font-size: 16px;

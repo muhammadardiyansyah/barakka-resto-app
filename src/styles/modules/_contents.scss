@@ -9,8 +9,7 @@ main {
 
 .content {
     padding: 32px;
-    // background-color: $thirtColor;
-    .headlineFigure {
+    .content-headline__figure {
         width: 100%;
         img {
             width: 80%;
@@ -26,85 +25,89 @@ main {
             padding-bottom: 15px;
         }
     }
-    .headlineContent {
+    .content-headline__content {
         width: 100%;
         padding: 26px 0;
         padding-top: 50px;
-        .headlineTitle {
+        .content-headline__content___title {
             font-size: 34px;
             font-weight: 500;
         }
-        .headlineDesk {
+        .content-headline__content__description {
             font-size: 20px;
             line-height: 1.2em;
             margin-top: 15px;
         }
-        .headlineButton {
+        .content-headline__content__button {
             @include mixins.button;
         }
     }
-    .exploreResto {
-        background-color: variables.$secondColor;
-        width: 100%;
-        .label {
-            display: block;
-            font-size: 22px;
-            padding-top: 30px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        .label::after {
-            content: '';
-            margin-top: 16px;
-            display: block;
-            border-bottom: 1px solid variables.$fourthColor;
-        }
-        .posts {
-            display: grid;
-            grid-row-gap: 16px;
-            margin: 16px auto;
-            padding: 20px;
+    .container {
+        .contaner-main {
+            background-color: variables.$secondColor;
             width: 100%;
+            .contaner-main__label {
+                display: block;
+                font-size: 22px;
+                padding-top: 30px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .contaner-main__label::after {
+                content: '';
+                margin-top: 16px;
+                display: block;
+                border-bottom: 1px solid variables.$fourthColor;
+            }
+            .contaner-main__posts {
+                display: grid;
+                grid-gap: 1.545em;
+                // grid-row-gap: 16px;
+                margin: 16px auto;
+                padding: 20px;
+                width: 100%;
+            }
         }
     }
 }
 
-.postItem {
+.post-item {
+    overflow: auto;
     background-color: variables.$firstColor;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 10px 0px;
+    margin: 10px 0;
     position: relative;
     width: 100%;
-    .postTitle {
+    .post-item__title {
         background-color: variables.$textColor;
         border-radius: 0 5px 5px 0;
         color: variables.$firstColor;
         font-size: 16px;
         position: absolute;
         padding: 5px;
-        top: 10px;    
+        top: 20px;    
         text-align: center;
     }
-    .postThumbnail {
+    .post-item__thumbnail {
         height: 250px;
         object-fit: cover;
         width: 100%;
     }
-    .postRating {
+    .post-item__rating {
         color: variables.$textColor;
         background-color: variables.$thirtColor;
         font-size: 16px;
         margin-top: 10px;
         text-align: center;
     }
-    .postContent {
+    .post-item__content {
         height: 260px;
         line-height: 22px;
         margin-bottom: 30px;
         overflow: hidden;
         padding: 30px;
         width: 100%;
-        .postItemTitle {
+        .post-item__content__title {
             display: block;
             font-size: 27px;
             font-weight: 600;
@@ -112,18 +115,21 @@ main {
             text-decoration: none;
             line-height: 44px;
         }
-        .postItemDesk {
+        .post-item__content__description {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 7;
+            -webkit-line-clamp: 8;
             -webkit-box-orient: vertical;
             font-size: 15px;
             position: relative;
         }
     }
-    .postButton {
+    .post-item__link__detail {
         @include mixins.button;
+        padding-top: 13px;
+        text-align: center;
+        text-decoration: none;
         cursor: pointer;
         display: inline-block;
         font-weight: 800;

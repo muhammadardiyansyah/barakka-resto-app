@@ -6,22 +6,22 @@ const Home = {
   async render() {
     return `
     <section class="content">
-            <article class="headline">
-                <figure class="headlineFigure">
-                    <img src="/images/img/27356.jpg" alt=" headline romantic date dan public house">
-                    <figcaption>Penyesuaian Tema Reservasi</figcaption>
-                </figure>
-                <div class="headlineContent">
-                    <h1 class="headlineTitle">Reservasi sekarang dapatkan promo</h1>
-                    <p class="headlineDesk">Reservasi di aplikasi kami dapatkan discount dan anda dapat menyesuaikan tema restaurant anda, apapun suasana hati anda kami akan melayani dengan maksimal. kepuasan pelanggan serta kenyamanan adalah keutamaan kami. Tunggu apa lagi jangan sampai kehabisan meja sehingga membuat anda menyesal. Anda tak perlu khaatir jika pelayan kami tidak memuaskan, kami memberikan garansi 100% gratis. Tunggu apa lagi klik tombol di bawah sekarang juga.</p>
-                    <button class="headlineButton">Pesan Sekarang</button>
-                </div>
-            </article>
+      <article class="content-headline">
+        <figure class="content-headline__figure">
+          <img src="/images/img/27356.jpg" alt="headline romantic date dan public house">
+          <figcaption>Penyesuaian Tema Reservasi</figcaption>
+        </figure>
+        <div class="content-headline__content">
+          <h1 class="content-headline__content___title">Reservasi sekarang dapatkan promo</h1>
+          <p class="content-headline__content__description">Reservasi di aplikasi kami dapatkan discount dan anda dapat menyesuaikan tema restaurant anda, apapun suasana hati anda kami akan melayani dengan maksimal. kepuasan pelanggan serta kenyamanan adalah keutamaan kami. Tunggu apa lagi jangan sampai kehabisan meja sehingga membuat anda menyesal. Anda tak perlu khaatir jika pelayan kami tidak memuaskan, kami memberikan garansi 100% gratis. Tunggu apa lagi klik tombol di bawah sekarang juga.</p>
+          <button class="content-headline__content__button">Pesan Sekarang</button>
+        </div>
+      </article>
       <div class="container">
         <div id="loading"></div>
-        <div class="main exploreResto">
-          <h1 class="label">Explore Your Favorite Restaurant</h1>
-          <section class=posts id="list-restaurant">
+        <div class="contaner-main">
+          <h1 class="contaner-main__label">Explore Your Favorite Restaurant</h1>
+          <section class="contaner-main__posts" id="list-restaurant">
           </section>
         </div>
         </div>
@@ -32,7 +32,7 @@ const Home = {
 
   async afterRender() {
     const loading = document.querySelector('#loading');
-    const main = document.querySelector('.main');
+    const main = document.querySelector('.contaner-main');
     loading.innerHTML = Loading();
     main.style.display = 'none';
     const listContainer = document.querySelector('#list-restaurant');

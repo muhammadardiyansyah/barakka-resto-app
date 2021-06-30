@@ -7,16 +7,16 @@
     margin-right: auto;
     text-align: center;
     background-color: variables.$secondColor;
-    .logoBar {
+    .logo-navigation__bar {
         margin: 15px 20px;
         width: 80px;
         background-color: transparent;
     }
-    .navList {
+    .navigation-list {
         width: 100%;
         padding: 0;
         margin: 0;
-        .navItem {
+        .navigation-list__item {
             box-sizing: border-box;
             display: inline-block;
             width: 30%;

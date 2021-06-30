@@ -5,12 +5,12 @@
     min-height: 56px;
     transition: min-height 0.3s;
     background-color: variables.$firstColor;
-    .headerInner {
+    .header-inner {
         width: 100%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        .headerTitle {
+        .header-inner__title {
             font-weight: 300;
             font-size: 4em;
             margin: 0.5em 0.25em;
@@ -18,7 +18,7 @@
             color: variables.$textColor;
         }
     }
-    .headerMenu {
+    .header-menu {
         text-decoration: none;
         font-size: 45px;
         margin: 10px auto;

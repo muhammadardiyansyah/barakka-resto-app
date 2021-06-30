@@ -1,7 +1,7 @@
 // scrool to top
 @use 'variables';
 
-.toTop {
+.to-top {
     border: none;
     border-radius: 50%;
     bottom: 32px;
@@ -16,7 +16,7 @@
     transition: all .4s;
     z-index: 10;
 }
-.toTop.active {
+.to-top.active {
     background-color: variables.$textColor;
     color: variables.$firstColor;
     opacity: 1;

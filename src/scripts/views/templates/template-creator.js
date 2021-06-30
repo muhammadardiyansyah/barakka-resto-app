@@ -8,9 +8,10 @@ const restaurantListTemplate = (restaurant) => `
         <figcaption class="post-item__rating">Rating ${restaurant.rating}</figcaption>
     </figure>
     <div class="post-item__content">
-        <a href="#/detail/${restaurant.id}" class="post-item__content__title">${restaurant.name}</a>
+        <h2 class="post-item__content__title">${restaurant.name}</h2>
         <p class="post-item__content__description">${restaurant.description}</p>
     </div>
+    <a class="post-item__link__detail" href="#/detail/${restaurant.id}">Detail</a>
   </article>
 `;
 

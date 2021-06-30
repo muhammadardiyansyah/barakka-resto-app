@@ -10,15 +10,15 @@
     background-image: url("/images/heros/hero-image_3.jpg");
     background-position: center;
     background-color: variables.$firstColor;
-    .heroInner {
+    .hero-inner {
         margin: 0 auto;
         max-width: 800px;
-        .heroTitle {
+        .hero-inner__title {
             color: variables.$firstColor;
             font-size: 36px;
             font-weight: 500;
         }
-        .heroTagline {
+        .hero-inner__tagline {
             color: variables.$firstColor;
             margin-top: 16px;
             font-size: 18px;

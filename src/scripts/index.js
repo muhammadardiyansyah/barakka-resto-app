@@ -4,9 +4,10 @@ import '../styles/responsive.css';
 import App from './views/app';
 
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
-  content: document.querySelector('#mainContent'),
+  button: document.querySelector('#hamburger-button'),
+  drawer: document.querySelector('#navigation-drawer'),
+  content: document.querySelector('#main-content'),
+  toTop: document.querySelector('.to-top'),
 });
 
 window.addEventListener('hashchange', () => {
@@ -15,4 +16,12 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+});
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 200) {
+    toTop.classList.add('active');
+  } else {
+    toTop.classList.remove('active');
+  }
 });

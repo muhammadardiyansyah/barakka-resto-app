@@ -1,18 +1,18 @@
-.content .exploreResto .posts {
+.content .container .contaner-main .contaner-main__posts {
     display: grid;
     grid-row-gap: 16px;
 }
 
 @media screen and (min-width: 455px) {
-    .content .headline .headlineContent {
+    .content .content-headline .content-headline__content {
         padding: 16px 16px;
     }
 
-    .content .headline .headlineContent .headlineTitle {
+    .content .content-headline .content-headline__content .content-headline__content___title {
         font-size: 28px;
     }
 
-    .content .headline .headlineContent .headlineDesk {
+    .content .content-headline .content-headline__content .content-headline__content__description {
         font-size: 16px;
     }
 }
@@ -46,33 +46,33 @@
 }
 
 @media screen and (min-width: 500px) {
-    .header .headerMenu {
+    .header .header-menu {
         display: none;
     }
 }
 
 @media screen and (min-width: 650px) {
-    .content .headline .headlineContent {
+    .content .content-headline .content-headline__content {
         margin: 0 auto;
         max-width: 650px;
     }
 
-    .post .postItem {
+    .contaner-main__posts .post-item {
         padding: 16px 32px 32px 32px;
     }
 
-    .post .postItem .postTitle {
+    .contaner-main__posts .post-item .post-item__title {
         font-size: 18px;
     }
 
-    .post .postItem .postContent
+    .contaner-main__posts .post-item .post-item__content
      {
         font-size: 14px;
     }
 }
 
 @media screen and (min-width: 700px) {
-    .content .exploreResto .posts {
+    .content .container .contaner-main .contaner-main__posts {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
@@ -82,14 +82,14 @@
 
 
 @media screen and (min-width: 900px) {
-    .content .headline {
+    .content .content-headline {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
-    .content .exploreResto .posts {
+    .content .container .contaner-main .contaner-main__posts {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
