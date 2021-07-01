@@ -19,7 +19,7 @@ const restaurantDetailTemplate = (detail) => `
 <div class="detail">
     <div>
         <div>
-            <img class="detail-img__res2" alt="image ${detail.name}" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" crossorigin="anonymous"/>
+            <img class="detail-img" alt="image ${detail.name}" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" crossorigin="anonymous"/>
         </div>
     </div>
     <ul class="detail-info">
@@ -66,7 +66,7 @@ const restaurantDetailTemplate = (detail) => `
             </ul>
         </div>
     </div>
-    <h3 class="detail-title__review">Review</h3>
+    <h3 class="detail-title__review">REVIEW</h3>
     <div class="detail-review grid-3">
         ${detail.customerReviews.map((review) => `
         <div class="detail-review__item">

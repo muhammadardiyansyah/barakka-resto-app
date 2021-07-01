@@ -1,0 +1,18 @@
+@use 'variables';
+
+.container {
+    margin: 1.3em 10%;
+    padding: 1em;
+    .title-container {
+        margin-bottom: 1.545em;
+        text-align: center;
+        font-size: 2.5em;
+        border-bottom: 0.5px solid black;
+    }
+}
+
+#list-restaurant {
+    display: grid;
+    grid-gap: 1.545em;
+    background-color: variables.$secondColor;
+}

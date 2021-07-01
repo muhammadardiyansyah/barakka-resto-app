@@ -28,12 +28,14 @@ class App {
   }
 
   _initialToTop() {
-    this._toTop.addEventListener('scroll', () => {
-      if (window.pageYOffset > 200) {
-        this.classList.add('active');
-      } else {
-        this.classList.remove('active');
-      }
+    this._toTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      this._toTop.classList.toggle('active', window.scrollY > 500);
     });
   }
 

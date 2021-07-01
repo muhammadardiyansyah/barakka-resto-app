@@ -20,6 +20,7 @@
   font-size: 40px;
   opacity: 0;
   position: fixed;
+  cursor: pointer;
   pointer-events: none;
   padding: 5px 10px;
   right: 20px;
@@ -56,6 +57,7 @@ body {
   font-family: "EB Garamond", serif;
   font-size: 12px;
   color: #393c43;
+  background-color: #fffefd;
 }
 
 section {
@@ -154,7 +156,7 @@ section {
 
 main {
   width: 100%;
-  margin: 0 auto;
+  margin: auto auto;
 }
 
 .content {
@@ -335,17 +337,17 @@ main {
 .container {
   margin: 1.3em 10%;
   padding: 1em;
-  background-color: greenyellow;
 }
 .container .container-main {
   width: 100%;
   margin: 0 auto;
-  background-color: hotpink;
+  background-color: #fffefd;
 }
 .container .container-main .container-main__title {
   font-size: 2em;
   margin-bottom: 1.545em;
   text-align: center;
+  border-bottom: 0.5px solid black;
 }
 .container .container-main #detail-restaurant {
   font-size: 1.2em;
@@ -356,18 +358,51 @@ main {
   grid-gap: 1.545em;
   font-size: 1.2em;
 }
+.detail .detail-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 3em;
+  border: 1em solid #393c43;
+}
 .detail h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding: 1em 1em 0 1em;
-  background-color: #fff5eb;
   font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #deedf0;
+  border-bottom: 0.5px solid black;
+}
+.detail .detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.detail .detail-info li {
+  position: relative;
+  display: block;
+  padding: 0.6em;
+  color: #393c43;
+  text-decoration: none;
+  background-color: #fff5eb;
+  border: 0.5px solid black;
+  border-width: 0 0 0.5px;
 }
 .detail .detail-info .detail-info__category {
   padding: 0.3em 1em;
-  background-color: #deedf0;
+  background-color: #f4c7ab;
   color: #393c43;
   margin-right: 2px;
   border-radius: 1.5em;
+}
+.detail .detail-menu h4 {
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 1em;
+  background-color: #fff5eb;
 }
 .detail .detail-menu .detail-menu__food {
   display: flex;
@@ -379,15 +414,149 @@ main {
   padding: 0.5em 0;
   display: block;
   text-decoration: none;
-  background-color: red;
-  border: 0.5px solid green;
+  background-color: #fff5eb;
+  border: 0.5px solid black;
   border-width: 0 0 0.5px;
 }
-.detail .detail-menu h4 {
-  font-weight: bold;
-  font-size: 1.37em;
-  padding: 1em;
+.detail .detail-menu .detail-menu__drink {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.detail .detail-menu .detail-menu__drink li {
+  padding: 0.5em 0;
+  display: block;
+  text-decoration: none;
   background-color: #fff5eb;
+  border: 0.5px solid black;
+  border-width: 0 0 0.5px;
+}
+.detail .detail-review {
+  max-width: 100%;
+  font-size: 1em;
+  text-align: center;
+}
+.detail .detail-review .detail-review__item {
+  color: #393c43;
+  border: 1px solid black;
+  background-color: #fff5eb;
+  border-radius: 1em;
+  box-shadow: 1px 2px 4px 2px rgba(0, 0, 0, 0.303);
+}
+.detail .detail-review .detail-review__item .detail-review__item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  color: #393c43;
+  border-bottom: 1px solid black;
+}
+.detail .detail-review .detail-review__item .detail-review__item__header .detail-review__item__header__name {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+.detail .detail-review .detail-review__item .detail-review__item__header .detail-review__item__header__date {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+.detail .detail-review .detail-review__item .review-body {
+  padding: 1.5em;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  margin: auto;
+}
+
+form {
+  margin: 2em 0;
+  padding: 1.5em;
+  border: 2px solid #393c43;
+  border-radius: 0.5em;
+  background-color: #fff5eb;
+}
+form .container-main__form__review__mb-3 {
+  margin-bottom: 1.3em;
+  margin-top: 0.5em;
+}
+form .container-main__form__review__mb-3 .contaner-main__form__review__mb-3__label {
+  padding-bottom: 8px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: small;
+  color: #393c43;
+}
+form .container-main__form__review__mb-3 .contaner-main__form__review__mb-3__control {
+  display: block;
+  width: 100%;
+  min-height: 1em;
+  padding: 0.3em;
+  font-size: 1em;
+  font-weight: normal;
+  color: #393c43;
+  background-color: #deedf0;
+  background-clip: padding-box;
+  border: 2px solid #393c43;
+  appearance: none;
+  border-radius: 0.5em;
+}
+form .contaner-main__form__review__button {
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+  margin-top: 24px;
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: #fff5eb;
+  border: none;
+  border-radius: 5px;
+  background-color: #393c43;
+  transition: opacity 0.3s;
+}
+form .contaner-main__form__review__button:hover {
+  opacity: 0.8;
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 1.3em 10%;
+  padding: 1em;
+}
+.container .title-container {
+  margin-bottom: 1.545em;
+  text-align: center;
+  font-size: 2.5em;
+  border-bottom: 0.5px solid black;
+}
+
+#list-restaurant {
+  display: grid;
+  grid-gap: 1.545em;
+  background-color: #deedf0;
 }
 
 /*# sourceMappingURL=main.css.map */

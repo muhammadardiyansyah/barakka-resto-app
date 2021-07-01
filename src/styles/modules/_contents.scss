@@ -4,7 +4,7 @@
 
 main {
     width: 100%;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 .content {
@@ -62,7 +62,6 @@ main {
             .contaner-main__posts {
                 display: grid;
                 grid-gap: 1.545em;
-                // grid-row-gap: 16px;
                 margin: 16px auto;
                 padding: 20px;
                 width: 100%;
