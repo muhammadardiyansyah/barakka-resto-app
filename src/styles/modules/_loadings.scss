@@ -1,0 +1,40 @@
+@use 'variables';
+
+@keyframes loading-grow {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      transform: none;
+    }
+}
+
+.loading-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: variables.$bodyColor;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loading-grow {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: text-bottom;
+        border-radius: 50%;
+        opacity: 0;
+        animation: loading-grow 0.75s linear infinite;
+    }
+    .first {
+        background-color: variables.$firstColor;
+    }
+    .second {
+        background-color: variables.$secondColor;
+    }
+    .thirth {
+        background-color: variables.$thirtColor;
+    }
+}

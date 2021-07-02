@@ -40,6 +40,7 @@
   "dependencies": {
     "idb": "^6.1.2",
     "regenerator-runtime": "^0.13.5",
-    "sass": "^1.34.1"
+    "sass": "^1.34.1",
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }

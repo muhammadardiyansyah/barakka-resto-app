@@ -10,7 +10,7 @@ const Detail = {
   async render() {
     return `
       <div class="container">
-        <div id="container-loading"></div>
+      <div id="loading"></div>
         <div class="container-main">
           <h2 class="container-main__title">DETAIL RESTAURANT</h2>
           <section id="detail-restaurant"></section>
@@ -36,7 +36,7 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailContainer = document.querySelector('#detail-restaurant');
-    const loading = document.querySelector('#container-loading');
+    const loading = document.querySelector('#loading');
     const main = document.querySelector('.container-main');
     loading.innerHTML = Loading();
     main.style.display = 'none';
