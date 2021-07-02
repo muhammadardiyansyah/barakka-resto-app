@@ -156,7 +156,7 @@ section {
 
 main {
   width: 100%;
-  margin: auto auto;
+  margin: 0 auto;
 }
 
 .content {
@@ -587,13 +587,13 @@ form .contaner-main__form__review__button:hover {
   animation: loading-grow 0.75s linear infinite;
 }
 .loading-wrapper .first {
-  background-color: #fff5eb;
-}
-.loading-wrapper .second {
   background-color: #deedf0;
 }
-.loading-wrapper .thirth {
+.loading-wrapper .second {
   background-color: #f4c7ab;
+}
+.loading-wrapper .thirth {
+  background-color: #b2b8a3;
 }
 
 /*# sourceMappingURL=main.css.map */

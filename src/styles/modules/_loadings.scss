@@ -29,12 +29,12 @@
         animation: loading-grow 0.75s linear infinite;
     }
     .first {
-        background-color: variables.$firstColor;
-    }
-    .second {
         background-color: variables.$secondColor;
     }
-    .thirth {
+    .second {
         background-color: variables.$thirtColor;
+    }
+    .thirth {
+        background-color: variables.$fourthColor;
     }
 }
