@@ -351,7 +351,8 @@ main {
 }
 
 .container {
-  margin: 1.3em 10%;
+  margin: auto;
+  width: 100%;
   padding: 1em;
 }
 .container .container-main {
@@ -512,7 +513,7 @@ form .container-main__form__review__mb-3 .contaner-main__form__review__mb-3__con
   display: block;
   width: 100%;
   min-height: 1em;
-  padding: 0.3em;
+  padding: 1.2em;
   font-size: 1em;
   font-weight: normal;
   color: #393c43;
@@ -542,7 +543,6 @@ form .contaner-main__form__review__button:hover {
 }
 
 .container {
-  margin: 1.3em 10%;
   padding: 1em;
 }
 .container .title-container {
