@@ -95,6 +95,10 @@ module.exports = {
       overrideExtension: true,
     }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled',
+      generateStatsFile: true,
+      statsOptions: { source: false },
+    }),
   ],
 };
