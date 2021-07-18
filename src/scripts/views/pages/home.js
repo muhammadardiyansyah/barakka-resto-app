@@ -8,7 +8,11 @@ const Home = {
     <section class="content">
       <article class="content-headline">
         <figure class="content-headline__figure">
-          <img src="/images/img/27356.jpg" alt="headline romantic date dan public house">
+          <picture>
+            <source type="image/webp" srcset="/img/27356.webp">
+            <source type="image/jpeg" srcset="/img/27356.jpg">
+            <img class="lazyload" data-src="/img/27356.jpg" alt="headline romantic date dan public house">
+          </picture>
           <figcaption>Penyesuaian Tema Reservasi</figcaption>
         </figure>
         <div class="content-headline__content">

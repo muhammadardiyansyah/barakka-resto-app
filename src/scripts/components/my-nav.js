@@ -7,7 +7,11 @@ class Nav extends HTMLElement {
     this.innerHTML = `
         <nav id="navigation-drawer" class="navigation">
             <div class="logo-navigation">
-                <img src="/images/img/bs.png" alt="logo navigasi barakka app" class="logo-navigation__bar">
+            <picture>
+              <source type="image/webp" srcset="/img/bs.webp">
+              <source type="image/jpeg" srcset="/img/bs.jpg">
+              <img data-src="/img/bs.png" alt="logo navigasi barakka app" class="logo-navigation__bar lazyload">
+            </picture>
             </div>
             <ul class="navigation-list">
                 <li class="navigation-list__item"><a href="#/home">Home</a></li>

@@ -25,6 +25,11 @@
     .content .content-headline .content-headline__content .content-headline__content__description {
         font-size: 16px;
     }
+    .hero {
+        background: url("/images/hero-image_3-small.jpg");
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 @media screen and (max-width: 499px) {
@@ -52,6 +57,11 @@
         border-bottom: 1px solid #393c43;
         width: 100%;
         text-align: left;
+    }
+    .hero {
+        background: url("/images/hero-image_3-small.jpg");
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -147,11 +157,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .hero {
+        background: url("/images/hero-image_3-large.jpg");
+        background-position: center;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     main {
         max-width: 1200px;
+    }
+    .hero {
+        background: url("/images/hero-image_3-xl.jpg");
+        background-position: center;
     }
 
 }

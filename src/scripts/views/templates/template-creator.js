@@ -4,7 +4,7 @@ const restaurantListTemplate = (restaurant) => `
   <article class="post-item">
     <h2 class="post-item__title">${restaurant.city}</h2>
     <figure>
-        <img class="post-item__thumbnail" src="${CONFIG.BASE_IMAGE_URL_SML + restaurant.pictureId}"/>
+        <img class="post-item__thumbnail lazyload" data-src="${CONFIG.BASE_IMAGE_URL_SML + restaurant.pictureId}" alt="image ${restaurant.name}"/>
         <figcaption class="post-item__rating">Rating ${restaurant.rating}</figcaption>
     </figure>
     <div class="post-item__content">

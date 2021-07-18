@@ -4,6 +4,8 @@ import './components/my-footer';
 import './components/my-hero';
 import './components/my-nav';
 import './components/my-header';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import '../styles/responsive.css';
 import swRegister from './utils/sw-register';
 import App from './views/app';
